@@ -16,4 +16,12 @@ public:
         }
         return num;
     }
+
+    int addDigits1(int num) {
+    	return num < 9 ? num : (num%9 == 0 ? 9 : num%9);
+    }
+
+    int addDigits2(int sum) {
+    	return (num - 1) % 9 + 1;
+    }
 }
