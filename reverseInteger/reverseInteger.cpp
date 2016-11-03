@@ -23,14 +23,12 @@ public:
         int sign = x > 0 ? 1 : -1;
         int result = 0;
         x = abs(x);
-        // int quotient = x / 10;	//商
-        // int rem = x % 10;		//余数
         while(x / 10 != 0) {				//x:253	25
             result = result * 10 + x % 10;	//3 	35
             x = x / 10;						//25 	2
         }
         if (result > (INT_MAX - x) / 10 || -result*10 < INT_MIN + x)) {
-            return 11111;
+            return 0;
         } else {
             result = result * 10 + x;
             return sign * result;
