@@ -24,7 +24,25 @@ struct TreeNode {
  
 class Solution {
 public:
+	void dfs(TreeNode *root, string str, vector<string>& result) {
+		if (str == "")
+			str = to_string(root->val);
+		else
+			str = str + "->" + to_string(root->val);
+		if (!root->left && !root->right)
+			result.push_back(str);
+		if (root->left)
+			dfs(root->left, str, result);
+		if (root->right)
+			dfs(root->right, str, result);
+	}
+
     vector<string> binaryTreePaths(TreeNode* root) {
-    	
+    	if (!root) {
+    		return vector<string>();
+    	}
+    	vector<string> result;
+    	dfs(root, "", result);
+    	return result;
     }
 };
