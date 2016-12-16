@@ -27,7 +27,7 @@ public:
             result = result * 10 + x % 10;	//3 	35
             x = x / 10;						//25 	2
         }
-        if (result > (INT_MAX - x) / 10 || -result*10 < INT_MIN + x)) {
+        if (result > (INT_MAX - x) / 10 || -result*10 < INT_MIN + x) {
             return 0;
         } else {
             result = result * 10 + x;
