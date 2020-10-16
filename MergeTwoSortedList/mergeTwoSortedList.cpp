@@ -29,6 +29,6 @@ public:
         	}
         }
         pc->next = pa ? pa : pb;
-        return result;
+        return result->next;
     }
 };
