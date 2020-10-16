@@ -27,3 +27,9 @@
 *.exe
 *.out
 *.app
+
+# IDEA
+.idea/
+.vscode/
+cmake-build-debug
+CMakeLists.txt
